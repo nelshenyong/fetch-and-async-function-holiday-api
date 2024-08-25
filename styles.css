@@ -1,0 +1,313 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  transition: ease-in 0.1s;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: rgb(227, 227, 227);
+  background-image: linear-gradient(66deg, rgb(230, 251, 254) 0%, rgb(237, 221, 251) 100%);
+}
+
+header {
+  display: flex;
+  padding: 0px 50px;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(149, 209, 237, 0.817);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+header > nav {
+  width: 20%;
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+a.header-nav-item {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+span.logo {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 40px;
+}
+
+span#menu {
+  display: inline-block;
+  width: 20%;
+  text-align: right;
+  font-size: 30px;
+}
+
+.circle span#icon::after {
+  content: "\ee4e";
+  font-family: 'boxicons';
+}
+
+.circle span#icon.dark::after {
+  content: "\eebe";
+  font-family: 'boxicons';
+}
+
+main {
+  min-height: calc(100vh - 80px - 100px);
+  background-color: white;
+  background-image: linear-gradient(45deg, rgb(88, 145, 191) 50%, rgb(133, 215, 253) 100%);
+}
+
+main > #content {
+  float: left;
+  min-height: 800px;
+  width: 70%;
+  z-index: 998;
+}
+
+article#content {
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+div.card {
+  display: flex;
+  width: 370px;
+  height: 200px;
+  background-color: rgba(203, 232, 245, 0.817);
+  border-radius: 10px;
+  padding: 30px;
+  align-items: center;
+  transition: transform 0.3s ease;
+  animation: bounce 0.3s;
+}
+
+div.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.678);
+}
+
+div.card > div.left,
+div.right {
+  display: flex;
+  align-items: center;
+}
+
+div.card > div.left {
+  width: 150px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+div.card > div.right {
+  width: 100%;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1.holiday-date {
+  letter-spacing: 2px;
+  text-align: left;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+h2.holiday-desc {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+div.right > p {
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 16px;
+}
+
+main > aside {
+  float: right;
+  width: 25%;
+  position: sticky;
+  top: 80px;
+  height: fit-content;
+}
+
+div.profile-card {
+  width: 80%;
+  background-color: rgba(203, 232, 245, 0.817);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 5vh;
+  background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnZqaWs3YWxmbWRvbzliaGk2bW1iY245Y3FhZG9xZDEya2t1Y3gxaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l1Et7Qw1XjvunS0Io/giphy.webp);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+img {
+  width: 150px;
+  border-radius: 10%;
+  box-shadow: 0 0 20px white;
+}
+
+img:hover {
+  transform: scale(1.08);
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  -ms-transform: scale(1.08);
+  -o-transform: scale(1.08);
+}
+
+div.profile-info {
+  color: white;
+  margin-top: 1vh;
+}
+
+div.socials {
+  display: flex;
+  gap: 5px;
+}
+
+div.socials > a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+div.socials > a:hover {
+  transform: scale(1.10);
+  -webkit-transform: scale(1.10);
+  -moz-transform: scale(1.10);
+  -ms-transform: scale(1.10);
+  -o-transform: scale(1.10);
+}
+
+div.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input[type="number"] {
+  width: 150px;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="number"]::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+input[type="number"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+  background-color: #fff;
+}
+
+input[type="number"]:hover {
+  border-color: #007bff;
+}
+
+div.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #458a72;
+  color: white;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #254b42;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  color: rgb(189, 189, 189);
+}
+
+/* Dark mode styles */
+body.dark {
+  background: rgb(30, 30, 30);
+  color: rgb(230, 230, 230);
+}
+
+body.dark header {
+  background-color: rgb(40, 40, 40);
+}
+
+body.dark main {
+  background-image: linear-gradient(45deg, rgb(135, 107, 173) 50%, rgb(18, 13, 31) 100%);
+}
+
+body.dark span.logo {
+  color: white;
+}
+
+body.dark .card {
+  background-color: rgba(60, 60, 60, 0.9);
+  color: white;
+}
+
+body.dark .profile-card {
+  background-color: rgba(60, 60, 60, 0.9);
+  color: white;
+  background-image: url(https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2FzejNpcWVmend4djJieDRvNjU2ZzQ1dzFhbnNoeDN0ajF2cjJsZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/heOKY8nrJUMfK/giphy.webp);
+}
+
+body.dark input[type="number"] {
+  background-color: rgb(50, 50, 50);
+  color: white;
+  border-color: rgb(100, 100, 100);
+}
+
+body.dark input[type="number"]::placeholder {
+  color: rgb(150, 150, 150);
+}
+
+body.dark button {
+  background-color: rgb(70, 70, 70);
+}
+
+body.dark footer p {
+  color: rgb(200, 200, 200);
+}
